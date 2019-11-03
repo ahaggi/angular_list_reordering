@@ -4,7 +4,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { from } from 'rxjs';
@@ -12,7 +11,7 @@ import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent
+
   ],
   imports: [
     BrowserModule,
