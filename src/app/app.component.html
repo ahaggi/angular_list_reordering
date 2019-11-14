@@ -1,14 +1,20 @@
-
-
-<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <div class="example-box"  *ngFor="let elm of data" cdkDrag>
-    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
-    {{elm.name}}
-  </div>
+<div *ngIf="loading; else showList">
+  <mat-progress-spinner mode="indeterminate"> </mat-progress-spinner>
 </div>
 
+<ng-template #showList>
+    <div >
+    <app-test-component [testId] = "testUsers[0]" [allIds]= "testUsers"></app-test-component>
+    <app-test-component [testId] = "testUsers[1]" [allIds]= "testUsers"></app-test-component>
+    </div>
 
-
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let elm of items" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+      {{elm.description}}
+    </div>
+  </div>
+</ng-template>
 
 
 <router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+<!--id="{{testId}}"    works fine-->
+<!--[id]="testId"      works fine-->
+<!--[attr.id]="testId" DOES NOT work!!??-->
+
+<div
+  cdkDropList
+  [id]="testId" 
+  [cdkDropListData]="todo"
+  [cdkDropListConnectedTo]="getConnectedTo(testId)"
+  class="example-list"
+  (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}
+    
+  </div>
+</div>
+  
