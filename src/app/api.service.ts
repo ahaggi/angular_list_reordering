@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ApiService  {
   private apiUrl = 'http://localhost:8000/items';
   constructor(private http: HttpClient) { }
 
